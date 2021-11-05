@@ -47,6 +47,8 @@ public class ConfigReader {
     private String workspace = null;
     private boolean autoAccept = false;
     private boolean showReference = false;
+    private boolean sourceRTL = false;
+    private boolean targetRTL = false;
     private boolean showSentenceId = false;
     private boolean assessing = true;
     private boolean impossible = false;
@@ -351,6 +353,14 @@ public class ConfigReader {
                 if (line.equals("showReference")) {
                     showReference = true;
                 }
+                if (line.equals("sourceRTL")) {
+                    sourceRTL = true;
+                    continue;
+                }
+                if (line.equals("targetRTL")) {
+                    targetRTL = true;
+                    continue;
+                }
                 if (line.startsWith("externalSourceInfoMaxOrder=")) {
                     int order = Integer.parseInt(line.substring(line.indexOf('=') + 1));
                     externalParamsBuilder.sourceMaxOrder(order);
@@ -535,6 +545,8 @@ public class ConfigReader {
                 assessmentSeparator,
                 autoAccept,
                 showReference,
+                sourceRTL,
+                targetRTL,
                 keystrokes,
                 impossible,
                 unchanged,

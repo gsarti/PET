@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<job id="wbreaker-test-ar-2-mt1">
+  <task id="1" type="pe">
+    <S producer="Flores">Previously, <p style="color: red">Ring's CEO</p>, Jamie Siminoff, remarked the company started when his doorbell wasn't audible from his shop in his garage.</S>
+    <MT producer="mt1">في السابق ، لاحظ جيمي سيمينوف ، الرئيس التنفيذي لشركة Ring ، أن الشركة بدأت عندما لم يكن جرس بابه مسموعًا من متجره في مرآب منزله.</MT>
+  </task>
+  <task id="2" type="pe">
+    <S producer="Flores">He built a WiFi door bell, he said.</S>
+    <MT producer="mt1">قال إنه صنع جرس باب واي فاي.</MT>
+  </task>
+  <task type="pe" id="3">
+    <S producer="Flores">Siminoff said sales boosted after his 2013 appearance in a Shark Tank episode where the show panel declined funding the startup.</S>
+    <MT producer="mt1">قال Siminoff إن المبيعات عززت بعد ظهوره عام 2013 في حلقة Shark Tank حيث رفضت لجنة العرض تمويل الشركة الناشئة.</MT>
+  </task>
+  <task type="pe" id="4">
+    <S producer="Flores">In late 2017, Siminoff appeared on shopping television channel QVC.</S>
+    <MT producer="mt1">في أواخر عام 2017 ، ظهر Siminoff على قناة التسوق التلفزيونية QVC.</MT>
+  </task>
+  <task id="5" type="pe">
+    <S producer="Flores">Ring also settled a lawsuit with competing security company, the ADT Corporation.</S>
+    <MT producer="mt1">كما قام رينغ بتسوية دعوى قضائية مع شركة الأمن المنافسة ، شركة ADT.</MT>
+  </task>
+</job>

@@ -24,6 +24,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Event;
 import java.awt.Font;
+import java.awt.font.TextAttribute;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -497,7 +498,12 @@ public class BorderLayoutAnnotationPage extends javax.swing.JFrame implements Bi
             //final AbstractUnitGUI src = (i == editablePosition) ? new EditableUnitGUI(showProducer, UnitGUI.UnitGUIType.SOURCE, 0) : new NonEditableUnitGUI(showProducer, UnitGUI.UnitGUIType.SOURCE, i-editablePosition);
             final AbstractUnitGUI src = new NonEditableUnitGUI(showProducer, UnitGUI.UnitGUIType.SOURCE, i - editablePosition);
             final AbstractUnitGUI tgt = (i == editablePosition) ? new EditableUnitGUI(showProducer, UnitGUI.UnitGUIType.TARGET, 0) : new NonEditableUnitGUI(showProducer, UnitGUI.UnitGUIType.TARGET, i - editablePosition);
-
+            if (ContextHandler.sourceRTL()) {
+                src.getDocument().putProperty(TextAttribute.RUN_DIRECTION,TextAttribute.RUN_DIRECTION_RTL);
+            }
+            if (ContextHandler.targetRTL()) {
+                tgt.getDocument().putProperty(TextAttribute.RUN_DIRECTION,TextAttribute.RUN_DIRECTION_RTL);
+            }
             if (ContextHandler.renderHTML()) {
                 src.setContentType("text/html");
                 tgt.setContentType("text/html");

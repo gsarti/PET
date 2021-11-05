@@ -4,13 +4,13 @@
 
 # The workspace is the directory where everything happens
 workspace=demo
-user=A1
+user=ar
 
 # Source language
 source=en
 
 # Target language
-target=es
+target=ar-AR
 
 # You may want to automatically save progress and keep all intermediate files
 # autoSave
@@ -78,6 +78,12 @@ editableFont=times,12
 
 # You may want to display a reference translation
 #showReference
+
+# Use right-to-left reading order for source
+#sourceRTL
+
+# Use right-to-left reading order for target
+targetRTL
 
 # You may want to display the id of the tasks
 #showSentenceId

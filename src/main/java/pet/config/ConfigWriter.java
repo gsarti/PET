@@ -97,6 +97,12 @@ public class ConfigWriter {
         write.println("# You may want to display a reference translation");
         write.println("#showReference");
         write.println("");
+        write.println("# Use right-to-left reading order for source");
+        write.println("#sourceRTL");
+        write.println("");
+        write.println("# Use right-to-left reading order for target");
+        write.println("#targetRTL");
+        write.println("");
         write.println("# You may want to display the id of the tasks");
         write.println("#showSentenceId");
         write.println("#idFont=times,8");

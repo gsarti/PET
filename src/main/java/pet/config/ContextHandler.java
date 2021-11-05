@@ -49,6 +49,8 @@ public class ContextHandler {
     private final static ThreadLocal<Boolean> assessing = new ThreadLocal<Boolean>();
     private final static ThreadLocal<Integer> assessmentsByPage = new ThreadLocal<Integer>();
     private final static ThreadLocal<Boolean> showReference = new ThreadLocal<Boolean>();
+    private final static ThreadLocal<Boolean> sourceRTL = new ThreadLocal<Boolean>();
+    private final static ThreadLocal<Boolean> targetRTL = new ThreadLocal<Boolean>();
     private final static ThreadLocal<Boolean> autoSave = new ThreadLocal<Boolean>();
     private final static ThreadLocal<Integer> autoSaveMemory = new ThreadLocal<Integer>();
     private final static ThreadLocal<String> workspace = new ThreadLocal<String>();
@@ -127,6 +129,8 @@ public class ContextHandler {
             final String assessmentSeparator,
             final boolean autoAccept,
             final boolean showReference,
+            final boolean sourceRTL,
+            final boolean targetRTL,
             final boolean keystrokes,
             final boolean impossible,
             final boolean unchanged,
@@ -188,6 +192,8 @@ public class ContextHandler {
         ContextHandler.assessmentSeparator.set(assessmentSeparator);
         ContextHandler.autoAccept.set(autoAccept);
         ContextHandler.showReference.set(showReference);
+        ContextHandler.sourceRTL.set(sourceRTL);
+        ContextHandler.targetRTL.set(targetRTL);
         ContextHandler.signalManager.set(new DefaultSignalManager());
         ContextHandler.flowManager.set(new PETFlowManager());
         ContextHandler.keystrokes.set(keystrokes);
@@ -272,6 +278,8 @@ public class ContextHandler {
         htAssessments.remove();
         autoAccept.remove();
         showReference.remove();
+        sourceRTL.remove();
+        targetRTL.remove();
         signalManager.remove();
         flowManager.remove();
         keystrokes.remove();
@@ -411,6 +419,14 @@ public class ContextHandler {
 
     public static boolean showReference() {
         return showReference.get();
+    }
+
+    public static boolean sourceRTL() {
+        return sourceRTL.get();
+    }
+
+    public static boolean targetRTL() {
+        return targetRTL.get();
     }
 
     public static boolean logChanges() {
